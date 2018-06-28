@@ -1,0 +1,28 @@
+﻿<Window x:Class="Pr1wWpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pr1wWpf"
+        mc:Ignorable="d"
+        Title="PR1" Height="300" Width="435.0" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+
+    <Grid >
+        <Menu x:Name="menu" VerticalAlignment="Top" >
+            <MenuItem Header="   Меню   "  BorderThickness="0,0,0,3"  >
+                <MenuItem Header="_Изображение"  BorderThickness="5,0,5,2"  Click="MenuItem_Click" BorderBrush="White"  Foreground="Black"   />
+                <MenuItem Header="_Даты"  BorderThickness="5,0,5,2"  Click="MenuItem_Click_1" Foreground="Black"/>
+                <MenuItem Header="_Видео"  BorderThickness="5,0,5,2"  Click="MenuItem_Click_2" Foreground="Black"/>
+            </MenuItem>
+        </Menu>
+        <Image x:Name="image" HorizontalAlignment="Right" Height="245" VerticalAlignment="Bottom" Width="254" Source="resour/E_4sKnxyb3Q.jpg" Opacity="{Binding ElementName=slider,Path=Value}" />
+        <Grid HorizontalAlignment="Left" Height="179" Margin="10,61,0,0" VerticalAlignment="Top" Width="146" ScrollViewer.CanContentScroll="True">
+            <Border  BorderThickness="0,5,0,5" HorizontalAlignment="Stretch"  Margin="0,0,0,0" VerticalAlignment="Stretch"  >
+                <Label x:Name="TimeLabel" Content="DateToDo" HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="{x:Null}"  BorderThickness="3,0,3,0"  FontSize="24" Margin="15,112,15,0" TextOptions.TextFormattingMode="Display" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            </Border>
+            <Slider x:Name="slider" HorizontalAlignment="Stretch" Margin="15,77,15,0" VerticalAlignment="Top" Foreground="{x:Null}" Background="{x:Null}" Maximum="5"/>
+            <Label x:Name="label" Content="Прозрачность" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="15,27,15,0" FontSize="16" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        </Grid>
+
+    </Grid>
+</Window>
